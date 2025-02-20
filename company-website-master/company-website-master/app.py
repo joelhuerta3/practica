@@ -2,6 +2,7 @@ import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
 from PIL import Image
+import os
 
 
 #config
@@ -12,10 +13,14 @@ def load_lottieurl(url):
     if r.status_code !=200:
         return None
     return r.json()
+    
 
-def local_css(style.css):
-    with open(style.css) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+def local_css(file_name):
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(current_dir, file_name)
+    with open(path) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 
 local_css("style/style.css")
 email_address ="huerta.joe.0103@gmail.com"
