@@ -5,7 +5,7 @@ from PIL import Image
 
 
 #config
-st.set_page_config(page_title="Valerapp", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="Joeapp", page_icon="🤖", layout="wide")
 
 def load_lottieurl(url):
     r = requests.get(url)
@@ -18,15 +18,15 @@ def local_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 local_css("style/style.css")
-email_address ="emailcontact@gmail.com"
+email_address ="huerta.joe.0103@gmail.com"
 
 lottie_file ="https://assets9.lottiefiles.com/packages/lf20_ggwq3ysg.json"
 
 with st.container():
-    st.subheader("Hola, somos Valerapp :wave:")
-    st.title("Creamos soluciones para acelerar tu negocio")
+    st.subheader("Hola, bienvenido a Joeapp :wave:")
+    st.title("Infraestructura Web.")
     st.write(
-        "Somos unos apasionados de la tecnología y la innovación, especializados en el sector de la digitalización y automatización de negocios. Nos gusta crear soluciones para resolver problemas y mejorar procesos."
+        "Esta es una página web para la materia de Infraestructura Web."
     )
     st.write("[Saber más >](https://valerapp.com/)")
 
